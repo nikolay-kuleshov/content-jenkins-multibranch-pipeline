@@ -40,7 +40,7 @@ pipeline {
         echo "Git Push to Origin"
         sh 'git push origin master'
       }
-      post {
+/*      post {
         success {
           emailext(
             subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Development Promoted to Master",
@@ -50,8 +50,9 @@ pipeline {
           )
         }
       }
+*/
     }
-    stage('Tagging the Release') {
+/*    stage('Tagging the Release') {
       when {
         branch 'master'
       }
@@ -70,5 +71,6 @@ pipeline {
         }
       }
     }
+*/
   }
 }
