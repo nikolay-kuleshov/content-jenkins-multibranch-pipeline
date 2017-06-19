@@ -23,7 +23,6 @@ pipeline {
         sh 'java -jar rectangle.jar 7 9'
       }
     }
-
     stage('Promote Development to Master') {
       when {
         branch 'development'
